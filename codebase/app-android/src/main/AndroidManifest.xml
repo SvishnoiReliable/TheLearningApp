@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.learn">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".application.LearnApp"
+        android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute"
+        tools:replace="android:supportsRtl">
+
+        <activity android:name=".view.activity.BookmarksActivity" />
+
+        <activity android:name=".view.activity.RecordingPlayActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".agora.activities.LiveActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification_small" />
+
+        <activity
+            android:name=".view.activity.SplashActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".view.activity.CourseDetailsActivity"
+            android:autoRemoveFromRecents="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"
+            android:parentActivityName=".view.activity.HomeActivity"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/HomeTheme"
+            tools:targetApi="n" />
+
+        <activity
+            android:name=".view.activity.HowToVideoActivity"
+            android:autoRemoveFromRecents="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"
+            android:parentActivityName=".view.activity.HomeActivity"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/HomeTheme"
+            tools:targetApi="n" />
+
+     
+
+        <activity
+            android:name=".view.activity.LiveClassesCallActivity"
+            android:autoRemoveFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".view.activity.HomeActivity"
+            android:theme="@style/LiveClassesCallTheme" />
+
+        <activity
+            android:name=".view.activity.MainQuestionActivity"
+            android:parentActivityName=".view.activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.OnBoardingActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/DoubtsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".view.activity.WebViewActivity"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.PaymentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.CourseDetailItemsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DoubtsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".view.activity.PdfViewActivity"
+            android:parentActivityName=".view.activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".view.activity.ImageListViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".view.activity.NoInternetActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.CameraActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AllTestTheme" />
+
+        <activity
+            android:name=".view.activity.SearchActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.CropImageActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".view.activity.McqQuizActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden|fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AllTestTheme" />
+
+        <activity
+            android:name=".view.activity.McqPracticeActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden|fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/AllTestTheme" />
+
+        <activity
+            android:name=".view.activity.NotificationActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.AnnouncementsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.AssignmentActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.MembershipActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.MainQsAssignmentActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.ProfileActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.OrdersActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.NotesActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.HowToActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.CurrentAffairsVideoListActivity"
+            android:autoRemoveFromRecents="true"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:launchMode="singleTask"
+            android:parentActivityName=".view.activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/VideoPlayerWithStatusBarTheme" />
+
+        <activity
+            android:name=".view.activity.LiveBatchYoutubePlayerActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/DoubtsTheme" />
+
+        <activity
+            android:name=".view.activity.ChatActivity"
+            android:theme="@style/DoubtsTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity android:name=".view.activity.AllBookmarksActivity" />
+
+        <activity
+            android:name=".view.activity.OpenTestsActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <activity
+            android:name=".view.activity.MockInterviewActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomeTheme" />
+
+        <receiver
+            android:name=".receiver.SmsReceiver"
+            android:exported="true"
+            android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".receiver.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+
+   
+        <service
+            android:name=".util.services.LiveBatchCallsService"
+            android:exported="false" />
+
+        <activity android:name=".view.activity.VideoPlayActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="landscape" />
+    </application>
+</manifest>

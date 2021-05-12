@@ -1,0 +1,2660 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:navigationBarColor">@color/white_transparent_80</item>
+    </style>
+
+    <style name="CustomFontTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="H1Header" parent="CustomFontTextViewStyle">
+        <item name="android:textSize">@dimen/sp_30</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_8</item>
+        <item name="android:paddingStart">@dimen/dp_10</item>
+        <item name="android:paddingEnd">@dimen/dp_10</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="H2Header" parent="CustomFontTextViewStyle">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/dark_blue</item>
+    </style>
+
+    <style name="H3Header" parent="CustomFontTextViewStyle">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="FooterTextViewStyle" parent="CustomFontTextViewStyle" tools:ignore="UnusedResources">
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="ProgressBarStyle" tools:keep="@style/ProgressBarStyle">
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+    <style name="EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/dp_48</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:background">@drawable/selection_item_background</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">@dimen/dp_18</item>
+    </style>
+
+    <style name="AppLogoStyle">
+        <item name="android:layout_width">@dimen/dp_63</item>
+        <item name="android:layout_height">@dimen/dp_63</item>
+        <item name="android:src">@drawable/icon_app_inner_logo</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="RoundedCornerButton" parent="TextAppearance.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/button_background_selector</item>
+        <item name="android:enabled">false</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:padding">@dimen/dp_15</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@drawable/button_text_color_selector</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginStart">@dimen/dp_40</item>
+        <item name="android:layout_marginEnd">@dimen/dp_40</item>
+        <item name="android:stateListAnimator" tools:ignore="NewApi">@null</item>
+    </style>
+
+    <style name="RoundedCornerButtonStyle" parent="RoundedCornerButton">
+        <item name="android:enabled">true</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:paddingTop">@dimen/dp_13</item>
+        <item name="android:paddingBottom">@dimen/dp_13</item>
+        <item name="android:paddingLeft">@dimen/dp_40</item>
+        <item name="android:paddingRight">@dimen/dp_40</item>
+    </style>
+
+    <style name="RootLayoutStyle" parent="AppTheme">
+        <item name="android:windowBackground">@color/white_transparent_80</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/dp_37</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:layout_marginStart">@dimen/dp_16</item>
+        <item name="android:layout_marginEnd">@dimen/dp_16</item>
+        <item name="android:layout_marginBottom">@dimen/dp_20</item>
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <style name="BaseUserAccessStyle" parent="AppTheme">
+        <item name="android:windowBackground">@color/light_blue</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="UserAccessStyle" parent="BaseUserAccessStyle">
+        <item name="android:paddingTop">@dimen/dp_37</item>
+        <item name="android:paddingStart">@dimen/dp_16</item>
+        <item name="android:layout_marginBottom">@dimen/dp_20</item>
+        <item name="android:paddingEnd">@dimen/dp_16</item>
+        <item name="android:fitsSystemWindows">false</item>
+    </style>
+
+    <!--[START] Common-->
+    <style name="HomeTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white_transparent_80</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="colorPrimary">@color/transparent</item>
+        <item name="colorOnPrimary">@color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:colorPrimaryDark">@color/transparent</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/transparent</item>
+    </style>
+
+    <style name="SearchViewTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorAccent">@color/dark_blue</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="DoubtsTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white_transparent_80</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@color/light_green_gradient_left
+        </item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="LiveClassesCallTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:textColorHint">@android:color/transparent</item>
+        <item name="colorPrimary">@color/transparent</item>
+        <item name="colorOnPrimary">@color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:colorPrimaryDark">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/transparent</item>
+    </style>
+
+    <style name="VideoPlayerNotchTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white_transparent_80</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/black</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:ignore="NewApi">never</item>
+    </style>
+
+    <style name="AllTestTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/white_transparent_80</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="VideoPlayerWithStatusBarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white_transparent_80</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:statusBarColor" tools:ignore="NewApi">@android:color/black</item>
+    </style>
+
+    <style name="fragmentClickable">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <!--[END] Common-->
+
+    <!--[START] Home-->
+    <style name="itemHome">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:paddingStart">@dimen/dp_1</item>
+        <item name="android:paddingEnd">@dimen/dp_1</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="itemHomeSpinner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="homeBeginner" tools:keep="@style/homeBeginner">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="homeMyActivity">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="homeLive">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="homeLevel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="homeLearn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="selectExamTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="selectExamSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:inputType">none</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="homeBestContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="homeBestIconContent">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:drawablePadding">@dimen/dp_3</item>
+        <item name="android:drawableStart">@drawable/ic_tick</item>
+        <item name="android:paddingStart">@dimen/dp_0</item>
+        <item name="android:paddingEnd">@dimen/dp_8</item>
+        <item name="android:paddingTop">@dimen/dp_8</item>
+        <item name="android:paddingBottom">@dimen/dp_8</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="itemVideo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="dolfilCornerItemVideo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <style name="upgrade">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="homeItemLiveClassesFaculty">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/twilight_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="homeItemLiveClassesFacultyLabel">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_light_gray</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+
+    <style name="homeItemLiveClassesFacultyName">
+        <item name="android:maxLines">1</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_light_gray</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="homeItemLiveClassesDateAndTime">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="homeItemOnlyLiveClassesDateAndTime">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_light_gray</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="homeItemLiveClassesSubject">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_light_gray</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="homeItemLiveClassesSubjectDes">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="homeItemLiveClassesStart">
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="homeItemLiveClassesStartDate">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="homeItemLiveClassesEnterClass">
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:background">@drawable/shape_enter_class</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="homeItemLiveClassesLive">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation" tools:ignore="NewApi">2dp</item>
+        <item name="android:background">@drawable/shape_live</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="homeItemLiveClassesLiveMore">
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="homeItemLiveClassesComingSoon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:background">@drawable/shape_coming_soon</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:elevation" tools:ignore="NewApi">2dp</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="categoryTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="homeCategoryTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="categorySubTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="homeCategorySubTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="bottomNavTitle" parent="Base.TextAppearance.AppCompat.Caption">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@drawable/bottom_nav_text_selector</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="BaseDialogTheme" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+
+    </style>
+    <!--[END] Home-->
+
+    <!--[START] Courses-->
+    <style name="coursesTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/deep_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="coursesSubTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="coursesToolbarTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesToolbarCenterTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesToolbarSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_9</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--[START] Collapsing Toolbar-->
+    <style name="TextAppearance.App.CollapsingToolbar.Collapsed" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="TextAppearance.App.CollapsingToolbar.Expanded" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+    <!--[END] Collapsing Toolbar-->
+    <!--[END] Courses-->
+
+    <!--[START] Courses Details-->
+    <style name="coursesRecommendedCourseTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="coursesRecommendedCourseSubTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="coursesRecommendedCourseBadge">
+        <item name="android:maxLength">3</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/dp_3</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/dp_13</item>
+        <item name="android:minWidth">@dimen/dp_13</item>
+        <item name="android:maxHeight">@dimen/dp_19</item>
+        <item name="android:maxWidth">@dimen/dp_19</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/shape_badge</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="coursesDetailsToolbarTitle" tools:keep="@style/coursesDetailsToolbarTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_17</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesSubjectTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesSubjectsCourses">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesToolbarSubtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesTab">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="recommendedTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="topicFree">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="topicEnterClass">
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="topicProgress">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="topicTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:minLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="topicPrices" tools:keep="@style/topicPrices">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/deep_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="topicStrikePrices">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="allCoursesPriceTag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="noHistoryTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="courseUpgrade">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
+        <item name="android:background">@drawable/shape_dark_blue</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="getCourse">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="getCoursePrice">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/transparent_white_30</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="getInfoTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesDetailsLearnTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/deep_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesDetailsMoreTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesDetailsToolbarClassName">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesDetailsToolbarCourseName">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesDetailsCourseVideoTitle">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="coursesDetailsCount">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="SeekBarTheme" parent="Widget.AppCompat.SeekBar" tools:keep="@style/SeekBarTheme">
+        <item name="android:progressBackgroundTint">@color/white_transparent</item>
+        <item name="android:progressTint">@color/dark_blue</item>
+        <item name="android:colorControlActivated">@color/twilight_blue</item>
+    </style>
+
+    <!--[END] Courses Details-->
+    <!--[START] Payment-->
+    <style name="purchaseTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="getPaymentTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_19</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="validateMonthPayment">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="paymentSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="paymentUpgradeLearning">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+    </style>
+    <!--[END] Payment-->
+    <!--[START] Navigation Drawer-->
+    <style name="navigationDrawerItemTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="navigationDrawerName">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="navigationDrawerCourses">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="navigationDrawerNotification">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_7</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--[END] Navigation Drawer-->
+
+    <!--[START] ExoPlayer-->
+    <style name="exoPlayerCaption">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:background">@android:color/black</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:padding">@dimen/dp_2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="exoPlayerPassTime">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:padding">@dimen/dp_2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--[END] ExoPlayer-->
+
+    <!--[START] BottomSheet Theme-->
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_marginStart">@dimen/dp_30</item>
+        <item name="android:layout_marginEnd">@dimen/dp_30</item>
+        <item name="android:layout_marginTop">@dimen/dp_30</item>
+    </style>
+
+    <style name="VideoQualityPlaybackTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--[END] BottomSheet Theme-->
+
+    <!--[START] Doubts-->
+    <style name="doubtsToolbarSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="doubtsListsTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="doubtsListsQuestion">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="doubtsListsPersonData">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="doubtsListsFollower">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="doubtsListsResolved">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_6</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="doubtsListsAnswer">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="doubtsQuestionEditText">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:maxLines">4</item>
+    </style>
+
+    <style name="doubtsQuestionDetailsAnswer">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+    <!--[END] Doubts-->
+
+    <!--[START] Audio Recording-->
+    <style name="audioRecordingTime">
+        <item name="android:textSize">@dimen/sp_40</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="audioRecordingTitle">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="audioRecordingDiscard">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="audioRecordingDiscardTextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:background">@drawable/button_background_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="audioRecordingCancelTextView">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:background">@drawable/shape_audio_cancel</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--[END] Audio Recording-->
+
+    <!--[START] Post Question-->
+    <style name="postQuestionBottom">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="postQuestionWriteQuestions">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:maxLines">4</item>
+    </style>
+
+    <style name="postQuestionTitle" tools:keep="@style/postQuestionTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="postQuestionBottomSheet" tools:keep="@style/postQuestionBottomSheet">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:textColor">@color/dark_grey_transparent_50</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:background">@drawable/shape_spinner</item>
+        <item name="android:drawableEnd">@drawable/drop</item>
+        <item name="android:drawablePadding">@dimen/dp_12</item>
+    </style>
+
+    <style name="yourMcqPerformanceTitle">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="mcqSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="mcqToolbarTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_6</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+
+    <style name="mcqTabText" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/dp_8</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textColor">@color/dark_blue</item>
+    </style>
+
+    <style name="mcqBottomSheetTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_5</item>
+        <item name="android:layout_marginStart">@dimen/dp_37</item>
+        <item name="android:layout_marginEnd">@dimen/dp_37</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="font_gilroy_medium">
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="font_gilroy_regular">
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="mcqBottomSheetSubTitleStyle" parent="font_gilroy_regular">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_5</item>
+        <item name="android:layout_marginStart">@dimen/dp_37</item>
+        <item name="android:layout_marginEnd">@dimen/dp_37</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="mcqSubmitTextView" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:background">@drawable/button_background_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="mcqAbortTextView" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:background">@drawable/shape_audio_cancel</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="mcq_prev_next_text_style" parent="font_gilroy_medium">
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="mcqMarkForReviewTextView" parent="font_gilroy_medium">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:paddingStart">@dimen/dp_12</item>
+        <item name="android:paddingEnd">@dimen/dp_12</item>
+        <item name="android:paddingTop">@dimen/dp_8</item>
+        <item name="android:paddingBottom">@dimen/dp_8</item>
+        <item name="android:background">@drawable/round_button_mcq_review</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+    </style>
+
+    <style name="mcQStartQuiz" parent="font_gilroy_regular">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
+        <item name="android:background">@drawable/button_background_selector</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingStart">@dimen/dp_40</item>
+        <item name="android:paddingEnd">@dimen/dp_40</item>
+        <item name="android:paddingTop">@dimen/dp_13</item>
+        <item name="android:paddingBottom">@dimen/dp_13</item>
+    </style>
+
+    <style name="mcQStartQuizAttempt" parent="font_gilroy_regular">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="mcqCheckforAnswersTextView" parent="mcQStartQuiz">
+        <item name="android:paddingStart">@dimen/dp_30</item>
+        <item name="android:paddingEnd">@dimen/dp_30</item>
+        <item name="android:paddingTop">@dimen/dp_14</item>
+        <item name="android:paddingBottom">@dimen/dp_14</item>
+    </style>
+
+    <style name="BaseDialogThemeMCQ" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert" tools:keep="@style/BaseDialogThemeMCQ">
+        <item name="android:layout_marginStart">@dimen/dp_20</item>
+        <item name="android:layout_marginEnd">@dimen/dp_20</item>
+        <item name="android:layout_marginTop">@dimen/dp_40</item>
+        <item name="android:layout_marginBottom">@dimen/dp_40</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="mcq_analytics_header" parent="font_gilroy_regular">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:layout_marginTop">@dimen/dp_19</item>
+        <item name="android:maxEms">12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="mcq_analytics_text" parent="font_gilroy_medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:layout_marginTop">@dimen/dp_6</item>
+        <item name="android:maxEms">12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="mcq_bottom_sheet_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">@dimen/dp_16</item>
+        <item name="android:layout_marginEnd">@dimen/dp_16</item>
+        <item name="android:layout_marginTop">@dimen/dp_12</item>
+        <item name="android:layout_marginBottom">@dimen/dp_12</item>
+    </style>
+
+    <style name="mcq_filter_item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/default_ripple_square</item>
+        <item name="android:paddingTop">@dimen/dp_12</item>
+        <item name="android:paddingBottom">@dimen/dp_12</item>
+        <item name="android:paddingStart">@dimen/dp_13</item>
+        <item name="android:paddingEnd">@dimen/dp_13</item>
+    </style>
+
+    <style name="mcq_question_title" parent="CustomFontTextViewStyle">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:layout_marginTop">@dimen/dp_15</item>
+        <item name="android:layout_marginBottom">@dimen/dp_25</item>
+        <item name="android:layout_marginStart">@dimen/dp_13</item>
+        <item name="android:layout_marginEnd">@dimen/dp_13</item>
+        <item name="android:lineSpacingExtra">@dimen/dp_6</item>
+    </style>
+
+    <style name="mcq_positive_negative_marks" parent="CustomFontTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dp_16</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:paddingEnd">@dimen/dp_3</item>
+        <item name="android:paddingStart">@dimen/dp_3</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="mcq_bottom_sheet_item_header" parent="font_gilroy_regular">
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="mcq_bottom_sheet_item_text" parent="mcq_bottom_sheet_item_header">
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textColor">@color/dark_blue</item>
+    </style>
+
+    <style name="mcq_options_answer" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_6</item>
+    </style>
+
+    <!--[END] MCQ screens-->
+
+    <!--[START] OverAll-->
+    <style name="yourQuizPerformanceTitle">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="quizSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="quizTotalTime">
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="overAllReportScoreAccuracyTitle">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="overAllReportScoreAccuracyResultTitle">
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="overAllReportScoreAccuracyResultValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="overAllReportFeedbackTitle">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="overAllReportFeedbackAnswer">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="overAllReportDes">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="overAllReportButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
+        <item name="android:background">@drawable/shape_gradient_dark_blue</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="overAllThanks">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="overAllExpert">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <!--[END] OverAll-->
+
+    <!--[START] MCQ Practice-->
+    <style name="mcq_guidance_text" parent="CustomFontTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_3</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="mcq_easy_medium_hard_text" parent="CustomFontTextViewStyle">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="mcq_practice_header" parent="CustomFontTextViewStyle">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="mcq_practice_text" parent="CustomFontTextViewStyle">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_5</item>
+    </style>
+
+    <!--[END] MCQ Practice-->
+
+    <!--[START] NOTES-->
+    <style name="notesCancel">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:background">@drawable/shape_audio_cancel</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="notesDiscard">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:background">@drawable/button_background_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="notesNoteAt">
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:lines">1</item>
+    </style>
+
+    <style name="editTextNotesAt">
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="createNote">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
+        <item name="android:background">@drawable/shape_gradient_dark_blue</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="createNoteTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="createNoteSortBy">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="createNoteCreateDate">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="allNoteSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="notesTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="notesVideoTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="notesTime">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+    </style>
+
+    <style name="notesMore">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="notesEditTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+    </style>
+
+    <style name="createNotesTitle">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textColorHint">@color/light_grey</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+    <!--[END] NOTES-->
+
+    <style name="playerLock">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:padding">@dimen/dp_2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="playerLockButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:padding">@dimen/dp_2</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--[START] Live Class -->
+    <style name="liveClassTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveClassSubTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:lines">4</item>
+        <item name="android:lineSpacingExtra">@dimen/dp_3</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveClassDecline">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:background">@drawable/shape_badge</item>
+    </style>
+
+    <style name="liveClassSwipe">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveClassLive">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveClassTeacherName">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveClassTeacherPost">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveClassSubjectTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveClassSubjectDes">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:lineSpacingExtra">@dimen/dp_4</item>
+        <item name="android:lines">3</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="liveClassDate">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--[END] Live Class-->
+    <!--START NOTIFICATION-->
+    <style name="notifications_header" parent="CustomFontTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_24</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="notifications_text" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="notifications_item_title" parent="font_gilroy_medium">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_5</item>
+    </style>
+
+    <style name="notifications_item_sub_title" parent="font_gilroy_regular">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_5</item>
+    </style>
+
+    <style name="notifications_item_time" parent="font_gilroy_medium">
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_5</item>
+    </style>
+
+    <style name="notificationToolbarTitle" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_6</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--END NOTIFICATION-->
+
+    <!--START ANNOUNCEMENTS-->
+    <style name="announcements_header" parent="CustomFontTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_24</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="announcements_text" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="announcements_item_title" parent="font_gilroy_medium">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_5</item>
+    </style>
+
+    <style name="announcements_item_sub_title" parent="font_gilroy_regular">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_5</item>
+    </style>
+
+    <style name="announcements_item_time" parent="font_gilroy_medium">
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_5</item>
+    </style>
+
+    <style name="announcementsToolbarTitle" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_6</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="announcements_item_name" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="announcements_item_date" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textSize">@dimen/sp_8</item>
+    </style>
+    <!--END ANNOUNCEMENT-->
+
+    <!--[START] Toast-->
+    <style name="toastMessage" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="toastAction" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <!--[END] Toast-->
+
+    <style name="unBookmarkStyle" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="bookmarkFilterCount" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="notificationClearTitleStyle" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+    </style>
+
+    <style name="Title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!--[START] MainQuestion-->
+    <style name="mainQuestionSubtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="mainQuestionSubject">
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="mainQuestionDescription">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="mainQuestionEvaluated">
+        <item name="android:textSize">@dimen/sp_8</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:drawableLeft">@drawable/shape_small_checked</item>
+        <item name="android:background">@drawable/shape_doubts_resolved</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">@dimen/dp_2</item>
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="filterTabs">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--[END] MainQuestion-->
+
+
+    <style name="coursesSearchTitle">
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="coursesSearchSubTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="testSeriesSearchTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="testSeriesSearchDesc">
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="testSeriesDate">
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="mockPracticeTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="mockPracticeDesc">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="mockPracticeCenterTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="currentAffairsMainTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_2</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="currentAffairsMainSubtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+    <!--[START] Live Batches-->
+    <style name="liveBatchesToolbarSubtitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesCategoryTitle">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesCoursesCount">
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="LiveBatchesLiveSession">
+        <item name="android:textSize">@dimen/sp_7</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="liveBatchesJoinNow" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:background">@drawable/shape_audio_cancel</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesPurchased" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:background">@drawable/shape_purched</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesStarted" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesSubjectTitle" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesSubjectDes" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_4</item>
+        <item name="android:gravity">start</item>
+        <item name="android:lines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesTeacherName" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesTeacherPost" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="liveBatchesTeacherExperience" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesFacingIssue" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesPleaseConnect" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="liveBatchesBetterLearning" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_27</item>
+    </style>
+
+    <style name="liveBatchesName" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_27</item>
+    </style>
+
+    <style name="liveBatchesTitle" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+    </style>
+
+    <style name="liveBatchesMore" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="liveBatchesNames" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_4</item>
+    </style>
+
+    <style name="liveBatchesSubTitle" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_4</item>
+    </style>
+
+    <style name="liveDetailBatch" parent="font_gilroy_medium">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="liveDetailStarted" parent="font_gilroy_regular">
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+    </style>
+
+    <style name="liveBatchesIncludedBenefits" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:gravity">start</item>
+
+    </style>
+
+    <style name="LiveBatchesLearningSchedule">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_6</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation" tools:ignore="NewApi">2dp</item>
+        <item name="android:background">@drawable/shape_learning_schedule</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="LearningScheduleTime" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="LearningScheduleDes" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:gravity">start</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_4</item>
+    </style>
+
+    <style name="LearningScheduleSubjectAndName" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="LearningScheduleDate" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="LearningScheduleLecture" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="learnScheduleResume">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:background">@drawable/shape_learn_schedule_resume</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="learnScheduleResumeTime">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:background">@drawable/shape_learn_schedule_time</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawableLeft">@drawable/ic_baseline_access_time_24</item>
+        <item name="android:tint">@color/red</item>
+        <item name="android:drawableTint" tools:ignore="NewApi">@color/red</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="popUpTitle">
+        <item name="android:textColor">@color/text_dark_gray</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_4</item>
+    </style>
+
+    <style name="kickPopUpTitle">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_4</item>
+    </style>
+
+    <style name="bottomSheetTitle" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="liveBatchesDetailSubjectTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+    <!--[END] Live Batches-->
+    <!--[START] Test series-->
+    <style name="TestSeriesTitle" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">start</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="TestSeriesSubTitle" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_3</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+    <!--[END] Test series-->
+
+    <style name="GraphSubtitle" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_3</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="GraphYourRank" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_3</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="uploadTests" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:background">@drawable/shape_upload</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:foreground">@drawable/default_ripple_full_corner</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!--[START] CHAT-->
+    <style name="chatUserName">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+    </style>
+
+    <style name="chatMessageDate">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="helpNumber">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="helpCenterTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_23</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="helpCenterOr">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="chatSettingsGroupTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_11</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="chatSettingsGroupName">
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="chatSettingsGroupDescription">
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="chatNotificationTitle">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_15</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="chatNotificationDes">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="chatNotificationMute">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">#46bdbf</item>
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+    <style name="bottomSheetBatchNotPurchaseTitle" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="bottomSheetBatchNotPurchaseSubTitle" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:lineSpacingExtra">@dimen/sp_4</item>
+    </style>
+
+    <style name="sessionEnd" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_24</item>
+    </style>
+
+    <style name="initialSmall" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+    <!--[END] CHAT-->
+
+    <style name="mockEditTextStyle" parent="EditTextStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+    </style>
+
+    <style name="questionOptions">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/gilroy_regular</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="questionOptionsPercentage">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:fontFamily">@font/gilroy_medium</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="pollSummary" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:maxLines">3</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="scorePosition" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/sp_10</item>
+    </style>
+
+    <style name="niceTitle" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="correctAnswer" parent="font_gilroy_regular">
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+    </style>
+
+    <style name="liveClassOver" parent="font_gilroy_medium">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+</resources>

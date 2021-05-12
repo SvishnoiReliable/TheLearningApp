@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="light_blue">#f2fdff</color>
+    <color name="deep_blue">#10137b</color>
+    <color name="dark_grey">#2b2b2b</color>
+    <color name="dark_blue">#002a80</color>
+    <color name="twilight_blue">#c3f0ff</color>
+    <color name="blue">#0059be</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="cadet_blue">#e5f8ff</color>
+    <color name="sky_blue">#85d8f7</color>
+    <color name="green">#0eac28</color>
+    <color name="green_transparent_10">#1A0EAC28</color>
+    <color name="light_grey">#6a6a6a</color>
+    <color name="light_grey_transparent_50">#806A6A6A</color>
+    <color name="dark_grey_transparent_50" tools:keep="@color/dark_grey_transparent_50">#802b2b2b
+    </color>
+    <color name="cornflower_blue">#02ACDF</color>
+    <color name="menu_1" tools:keep="@color/menu_1">#ffe4e4</color>
+    <color name="arctic_blue" tools:keep="@color/arctic_blue">#c9fdf9</color>
+    <color name="menu_3" tools:keep="@color/menu_3">#d6fdc6</color>
+    <color name="light_yellow" tools:keep="@color/light_yellow">#ffffe1</color>
+    <color name="light_purple" tools:keep="@color/light_purple">#dacffa</color>
+    <color name="light_orange" tools:keep="@color/light_orange">#ffe6cf</color>
+    <color name="purple">#8400FF</color>
+    <color name="mint">#D6FDC6</color>
+    <color name="jungle_green">#84E2B3</color>
+    <color name="alice_blue">#f9feff</color>
+    <color name="steel_blue">#ccdbf8</color>
+
+    <color name="button_gradient_left_transparent">#3300aee1</color>
+    <color name="button_gradient_right_transparent">#330058bd</color>
+    <color name="white_transparent">#80ffffff</color>
+    <color name="black_transparent_20">#33000000</color>
+    <color name="dark_blue_transparent_30">#4D002A80</color>
+    <color name="dark_blue_transparent_40">#5D002A80</color>
+    <color name="white_transparent_80" tools:keep="@color/white_transparent_80">#CCFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_transparent_60">#99000000</color>
+    <color name="black_transparent_50">#80000000</color>
+    <color name="black_transparent_80">#CC000000</color>
+    <color name="ocean_blue">#87D0FF</color>
+
+    <color name="button_gradient_left">#00a6de</color>
+    <color name="button_gradient_right">#0042b3</color>
+    <color name="light_green_gradient_left">#c8fdf9</color>
+    <color name="light_green_gradient_right">#71f5eb</color>
+    <color name="blue_gradient_left">#60d6ff</color>
+    <color name="blue_gradient_right">#10a2ff</color>
+    <color name="blue_gradient_right_transparent_50" tools:keep="@color/blue_gradient_right_transparent_50">
+        #8010A2FF
+    </color>
+    <color name="green_gradient_left">#51f8bb</color>
+    <color name="green_gradient_right">#00c57d</color>
+    <color name="red_gradient_left">#ff7d7d</color>
+    <color name="red_gradient_right">#ff4f53</color>
+    <color name="orange_gradient_left">#ffbb51</color>
+    <color name="orange_gradient_right">#fc6b23</color>
+    <color name="transparent_white_30">#4DFFFFFF</color>
+    <color name="azure_blue">#11BDEF</color>
+    <color name="cyan">#72FFFF</color>
+    <color name="yellow">#ffea00</color>
+    <color name="dark_yellow">#ffba00</color>
+    <color name="light_red">#ff7352</color>
+    <color name="light_green">#6ed13d</color>
+    <color name="deep_sky_blue">#31c6f6</color>
+    <color name="navy_blue">#0072f6</color>
+    <color name="home_background" tools:keep="@color/home_background">#E8F3F9</color>
+    <color name="peach_light_top">#FDF3F1</color>
+    <color name="peach_bottom">#FADFD2</color>
+    <color name="azure_blue_bottom">#2cb1ff</color>
+    <color name="baby_blue">#58ceff</color>
+    <color name="sky_blue_50">#8085D8F7</color>
+
+    <!--TODO:replace name with designer name -->
+    <color name="home_tab_unselected">#00AEE1</color>
+    <color name="live_call">#09d260</color>
+    <color name="live_strike_amount">#800059be</color>
+    <color name="dark_orange">#ffd0a5</color>
+    <color name="shimmer_cell_background">#dddddd</color>
+    <color name="fadish_blue">#00AEE1</color>
+    <color name="seashell">#f8c1c5</color>
+    <color name="misty_rose">#ffeaec</color>
+    <color name="blue_transparent_30">#4D0059BE</color>
+    <color name="lavender_purple">#caa8ff</color>
+    <color name="light_purple_middle">#f4dbff</color>
+    <color name="light_purple_bottom">#f6dfff</color>
+    <color name="light_grey_light">#4D6A6A6A</color>
+    <color name="red_transparent_10">#1AFF0000</color>
+    <color name="lighter_sky_blue">#f0f6ff</color>
+    <color name="text_blue">#1f2cbe</color>
+    <color name="text_dark_gray">#0b2253</color>
+    <color name="text_light_gray">#5d6e9a</color>
+    <color name="light_sky_blue">#b8d7ff</color>
+</resources>
