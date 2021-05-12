@@ -1,14 +1,11 @@
-package com.dizvik.viewmodel
+package com.learn.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.dizvik.repository.SplashRepository
-import com.dizvik.util.DeviceUtil
+import com.learn.repository.SplashRepository
+import com.learn.util.DeviceUtil
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-/**
- * Created by Abhin.
- */
 class SplashViewModel(
     private val deviceUtil: DeviceUtil,
     private val repository: SplashRepository
